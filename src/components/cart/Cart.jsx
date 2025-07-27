@@ -64,7 +64,7 @@ export default function Cart() {
                       {item.name}
                     </h3>
                     <p className="text-blue-600 text-sm">
-                      KSH{item.price.toLocaleString()}
+                      AED {item.price.toLocaleString()}
                     </p>
                     
                     {/* Quantity Controls */}
