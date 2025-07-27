@@ -29,13 +29,6 @@ export default function ProductDetailsPage() {
     product.image,
     product.image,
     product.image,
-    product.image,
-    product.image,
-    product.image,
-    product.image,
-    product.image,
-    product.image,
-    product.image,
   ];
 
   const sizes = ["XS", "S", "M", "L", "XL", "2XL"];
