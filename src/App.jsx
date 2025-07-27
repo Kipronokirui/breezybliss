@@ -6,6 +6,7 @@ import AuthModal from './components/auth/AuthModal'
 import Cart from './components/cart/Cart'
 import Navbar from './components/common/Navbar'
 import ProductGrid from './components/ProductGrid'
+import Header from './components/common/Header'
 
 const AppContent = () => {
   const { isAuthModalOpen, authModalMode, closeAuthModal } = useAuth();
@@ -13,7 +14,7 @@ const AppContent = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-400 via-yellow-300 to-[#FEF3C7]">
       <Navbar />
-      <main className="container mx-auto px-4 py-8">
+      <main className="mt-16 mx-auto px-4 py-8">
         <ProductGrid />
       </main>
       <Cart />

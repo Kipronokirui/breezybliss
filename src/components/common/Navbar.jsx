@@ -9,7 +9,7 @@ export default function Navbar() {
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
-    <header className="w-full bg-yellow-400 shadow-lg sticky top-0 z-40">
+    <header className="w-full fixed bg-yellow-400 shadow-lg top-0 z-40">
       <div className="w-full px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo/Brand */}

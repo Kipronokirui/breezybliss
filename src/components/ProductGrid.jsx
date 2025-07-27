@@ -12,7 +12,7 @@ export default function ProductGrid() {
     : products.filter(product => product.category === selectedCategory);
 
   return (
-    <div className="space-y-8">
+    <div className="pt-4 space-y-8">
       {/* Category Filter */}
       <div className="flex flex-wrap gap-3 justify-center">
         {categories.map(category => (
