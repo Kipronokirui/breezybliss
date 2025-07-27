@@ -1,6 +1,5 @@
 
 export const products = [
-  // Bags
   {
     id: 1,
     name: "Sunset Tote",

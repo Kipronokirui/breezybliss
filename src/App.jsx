@@ -1,40 +1,71 @@
-import React from 'react'
-import { CartProvider } from './context/CartContext'
-import { AuthProvider } from './context/AuthContext'
-import { useAuth } from './context/AuthContext'
-import AuthModal from './components/auth/AuthModal'
-import Cart from './components/cart/Cart'
-import Navbar from './components/common/Navbar'
-import ProductGrid from './components/ProductGrid'
-import Header from './components/common/Header'
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { CartProvider } from "./context/CartContext";
+import { AuthProvider } from "./context/AuthContext";
+import { useAuth } from "./context/AuthContext";
+import AuthModal from "./components/auth/AuthModal";
+import Cart from "./components/cart/Cart";
+import Navbar from "./components/common/Navbar";
+import ProductGrid from "./components/ProductGrid";
+import Home from "./pages/Home";
+import ProductDetailsPage from "./pages/ProductDetailsPage";
 
+const MainLayout = ({ children }) => {
+  return (
+    <>
+      <Navbar />
+      <main className="mt-16 min-h-screen">{children}</main>
+    </>
+  );
+};
+{
+  /* <main className="mt-16 mx-auto px-4 py-8">
+        <ProductGrid />
+      </main> */
+}
 const AppContent = () => {
   const { isAuthModalOpen, authModalMode, closeAuthModal } = useAuth();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-yellow-400 via-yellow-300 to-[#FEF3C7]">
+    <div>
       <Navbar />
-      <main className="mt-16 mx-auto px-4 py-8">
-        <ProductGrid />
-      </main>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <MainLayout>
+              <Home />
+            </MainLayout>
+          }
+        />
+        <Route
+          path="/product/:id"
+          element={
+            <MainLayout>
+              <ProductDetailsPage />
+            </MainLayout>
+          }
+        />
+      </Routes>
       <Cart />
-      <AuthModal 
+      <AuthModal
         isOpen={isAuthModalOpen}
         onClose={closeAuthModal}
         initialMode={authModalMode}
       />
     </div>
   );
-}
+};
 function App() {
-
   return (
-    <AuthProvider>
-      <CartProvider>
-        <AppContent />
-      </CartProvider>
-    </AuthProvider>
+    <BrowserRouter>
+      <AuthProvider>
+        <CartProvider>
+          <AppContent />
+        </CartProvider>
+      </AuthProvider>
+    </BrowserRouter>
   );
 }
 
-export default App
+export default App;

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Heart, ShoppingCart } from 'lucide-react';
 import { useCart } from '../context/CartContext';
+import { Link } from 'react-router-dom';
 
 export default function ProductCard({ product }) {
   const { addToCart } = useCart();
@@ -12,19 +13,19 @@ export default function ProductCard({ product }) {
   return (
     <div className="bg-[#FEF3C7] rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-4 border-yellow-300">
       {/* Product Image */}
-      <div className="bg-white rounded-xl p-6 mb-4 aspect-square flex items-center justify-center overflow-hidden">
+      <Link to={`/product/${product.id}`} className="bg-white rounded-xl p-6 mb-4 aspect-square flex items-center justify-center overflow-hidden">
         <img
           src={product.image}
           alt={product.name}
           className="w-full h-full object-cover rounded-lg"
         />
-      </div>
+      </Link>
 
       {/* Product Info */}
       <div className="space-y-3">
-        <h3 className="text-lg font-bold text-blue-700 text-center uppercase tracking-wide">
+        <Link to={`/product/${product.id}`} className="text-lg font-bold text-blue-700 text-center uppercase tracking-wide">
           {product.name}
-        </h3>
+        </Link>
         
         <div className="flex items-center justify-between">
           <span className="text-xl font-bold text-blue-700">
