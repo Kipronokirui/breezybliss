@@ -32,9 +32,9 @@ export default function ProductCard({ product }) {
           </span>
           
           <div className="flex items-center space-x-2">
-            <div className="p-2 cursor-pointer rounded-full bg-white/50 hover:bg-white/70 transition-colors">
+            {/* <div className="p-2 cursor-pointer rounded-full bg-white/50 hover:bg-white/70 transition-colors">
               <Heart className="w-4 h-4 text-blue-600" />
-            </div>
+            </div> */}
             <div 
               onClick={handleAddToCart}
               className="p-2 cursor-pointer rounded-full bg-blue-600 hover:bg-blue-700 transition-colors text-white"
