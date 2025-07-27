@@ -17,9 +17,9 @@ export default function Navbar() {
             <div className="md:hidden p-2 cursor-pointer rounded-lg bg-white/20 hover:bg-white/30 transition-colors">
               <Menu className="w-5 h-5 text-blue-700" />
             </div>
-            <h1 className="text-xl md:text-2xl font-bold text-blue-700 tracking-wide">
+            <h3 className="text-xl md:text-2xl font-bold text-blue-700 tracking-wide">
               BREEZY BLISS
-            </h1>
+            </h3>
           </div>
 
           {/* Navigation */}
