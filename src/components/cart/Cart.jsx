@@ -29,12 +29,12 @@ export default function Cart() {
           <h2 className="text-2xl font-bold text-yellow-300 tracking-wide">
             YOUR CART
           </h2>
-          <button 
+          <div 
             onClick={toggleCart}
-            className="p-2 rounded-full hover:bg-blue-500 transition-colors"
+            className="p-2 cursor-pointer rounded-full hover:bg-blue-500 transition-colors"
           >
             <X className="w-6 h-6 text-yellow-300" />
-          </button>
+          </div>
         </div>
 
         {/* Cart Items */}
@@ -70,29 +70,29 @@ export default function Cart() {
                     {/* Quantity Controls */}
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-2">
-                        <button
+                        <div
                           onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                          className="p-1 rounded-full bg-blue-100 hover:bg-blue-200 transition-colors"
+                          className="p-1 cursor-pointer rounded-full bg-blue-100 hover:bg-blue-200 transition-colors"
                         >
                           <Minus className="w-4 h-4 text-blue-600" />
-                        </button>
+                        </div>
                         <span className="w-8 text-center font-bold text-blue-700">
                           {item.quantity}
                         </span>
-                        <button
+                        <div
                           onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                          className="p-1 rounded-full bg-blue-100 hover:bg-blue-200 transition-colors"
+                          className="p-1 cursor-pointer rounded-full bg-blue-100 hover:bg-blue-200 transition-colors"
                         >
                           <Plus className="w-4 h-4 text-blue-600" />
-                        </button>
+                        </div>
                       </div>
                       
-                      <button
+                      <div
                         onClick={() => removeFromCart(item.id)}
-                        className="p-1 rounded-full hover:bg-red-100 transition-colors"
+                        className="p-1 cursor-pointer rounded-full hover:bg-red-100 transition-colors"
                       >
                         <Trash2 className="w-4 h-4 text-red-500" />
-                      </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -107,7 +107,7 @@ export default function Cart() {
             <div className="flex justify-between items-center text-yellow-300">
               <span className="text-lg font-medium">Subtotal</span>
               <span className="text-xl font-bold">
-                KSH{getCartTotal().toLocaleString()}
+                AED {getCartTotal().toLocaleString()}
               </span>
             </div>
             

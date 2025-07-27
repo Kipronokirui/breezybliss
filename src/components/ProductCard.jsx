@@ -28,19 +28,19 @@ export default function ProductCard({ product }) {
         
         <div className="flex items-center justify-between">
           <span className="text-xl font-bold text-blue-700">
-            KSH{product.price.toLocaleString()}
+            AED {product.price.toLocaleString()}
           </span>
           
           <div className="flex items-center space-x-2">
-            <button className="p-2 rounded-full bg-white/50 hover:bg-white/70 transition-colors">
+            <div className="p-2 cursor-pointer rounded-full bg-white/50 hover:bg-white/70 transition-colors">
               <Heart className="w-4 h-4 text-blue-600" />
-            </button>
-            <button 
+            </div>
+            <div 
               onClick={handleAddToCart}
-              className="p-2 rounded-full bg-blue-600 hover:bg-blue-700 transition-colors text-white"
+              className="p-2 cursor-pointer rounded-full bg-blue-600 hover:bg-blue-700 transition-colors text-white"
             >
               <ShoppingCart className="w-4 h-4" />
-            </button>
+            </div>
           </div>
         </div>
 

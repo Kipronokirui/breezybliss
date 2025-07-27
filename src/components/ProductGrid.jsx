@@ -16,17 +16,17 @@ export default function ProductGrid() {
       {/* Category Filter */}
       <div className="flex flex-wrap gap-3 justify-center">
         {categories.map(category => (
-          <button
+          <div
             key={category}
             onClick={() => setSelectedCategory(category)}
-            className={`px-6 py-3 rounded-full font-medium capitalize transition-all transform hover:scale-105 ${
+            className={`px-6 py-3 rounded-full font-medium capitalize transition-all transform hover:scale-105 cursor-pointer ${
               selectedCategory === category
                 ? 'bg-blue-600 text-white shadow-lg'
                 : 'bg-white/50 text-blue-700 hover:bg-white/70'
             }`}
           >
             {category === 'all' ? 'All Products' : category}
-          </button>
+          </div>
         ))}
       </div>
 
