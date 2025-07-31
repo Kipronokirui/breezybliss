@@ -12,6 +12,7 @@ import ProductDetailsPage from "./pages/ProductDetailsPage";
 import DashboardPage from "./pages/DashboardPage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
+import ShopPage from "./pages/ShopPage";
 
 const MainLayout = ({ children }) => {
   return (
@@ -37,6 +38,14 @@ const AppContent = () => {
           element={
             <MainLayout>
               <Home />
+            </MainLayout>
+          }
+        />.
+        <Route
+          path="/shop"
+          element={
+            <MainLayout>
+              <ShopPage />
             </MainLayout>
           }
         />

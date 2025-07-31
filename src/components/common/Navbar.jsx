@@ -3,6 +3,7 @@ import { Search, User, ShoppingBag, Menu } from "lucide-react";
 import { useCart } from "../../context/CartContext";
 import { useAuth } from "../../context/AuthContext";
 import logo from "../../assets/breezeBlissLogo.jpeg";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const { cartItems, toggleCart } = useCart();
@@ -22,7 +23,7 @@ export default function Navbar() {
               <img
                 src={logo}
                 alt="Breezy Bliss Logo"
-                className="w-8 h-8 object-contain rounded-full"
+                className="w-10 h-10 object-contain rounded-full"
               />
               <h3 className="text-xl md:text-2xl font-bold text-blue-700 tracking-wide">
                 BREEZY BLISS
@@ -32,12 +33,12 @@ export default function Navbar() {
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a
-              href="#"
+            <Link
+              to={`/shop`}
               className="text-blue-700 font-medium hover:text-blue-800 transition-colors"
             >
               Shop
-            </a>
+            </Link>
             <a
               href="#"
               className="text-blue-700 font-medium hover:text-blue-800 transition-colors"
@@ -63,12 +64,13 @@ export default function Navbar() {
             <div className="p-2 cursor-pointer rounded-full bg-white/20 hover:bg-white/30 transition-colors">
               <Search className="w-5 h-5 text-blue-700" />
             </div>
-            <div
-              onClick={() => openAuthModal("login")}
+            <Link
+              // onClick={() => openAuthModal("login")}
+              to={`/account/login`}
               className="p-2 cursor-pointer rounded-full bg-white/20 hover:bg-white/30 transition-colors"
             >
               <User className="w-5 h-5 text-blue-700" />
-            </div>
+            </Link>
             <div
               onClick={toggleCart}
               className="relative p-2 cursor-pointer rounded-full bg-white/20 hover:bg-white/30 transition-colors"

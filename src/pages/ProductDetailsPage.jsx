@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, Heart, Share2, Star, Plus, Minus } from "lucide-react";
 import { products } from "../data/products";
 import { useCart } from "../context/CartContext";
@@ -10,9 +10,6 @@ export default function ProductDetailsPage() {
   const productId = parseInt(id, 10); // convert to number if your IDs are numbers
 
   const product = products.find((p) => p.id === productId);
-  function onBack() {
-    alert("User going Back");
-  }
   const { addToCart } = useCart();
   const [selectedImage, setSelectedImage] = useState(0);
   const [selectedSize, setSelectedSize] = useState("M");
@@ -56,13 +53,13 @@ export default function ProductDetailsPage() {
     <div className="min-h-screen bg-gradient-to-br from-yellow-400 via-yellow-300 to-cream-200">
       {/* Header */}
       <div className="bg-yellow-400 p-4">
-        <button
-          onClick={onBack}
+        <Link
+          to={`/shop`}
           className="flex items-center space-x-2 text-blue-700 hover:text-blue-800 transition-colors"
         >
           <ArrowLeft className="w-5 h-5" />
           <span className="font-medium">Back to Products</span>
-        </button>
+        </Link>
       </div>
 
       <div className="container mx-auto px-4 py-8">
