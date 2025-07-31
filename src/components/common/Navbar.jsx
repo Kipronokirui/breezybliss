@@ -34,10 +34,22 @@ export default function Navbar() {
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link
+              to={`/`}
+              className="text-blue-700 font-medium hover:text-blue-800 transition-colors"
+            >
+              Home
+            </Link>
+            <Link
               to={`/shop`}
               className="text-blue-700 font-medium hover:text-blue-800 transition-colors"
             >
               Shop
+            </Link>
+            <Link
+              to={`/dashboard`}
+              className="text-blue-700 font-medium hover:text-blue-800 transition-colors"
+            >
+              Dashboard
             </Link>
             <a
               href="#"
@@ -65,7 +77,6 @@ export default function Navbar() {
               <Search className="w-5 h-5 text-blue-700" />
             </div>
             <Link
-              // onClick={() => openAuthModal("login")}
               to={`/account/login`}
               className="p-2 cursor-pointer rounded-full bg-white/20 hover:bg-white/30 transition-colors"
             >
