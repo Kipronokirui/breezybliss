@@ -13,12 +13,14 @@ import DashboardPage from "./pages/DashboardPage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import ShopPage from "./pages/ShopPage";
+import Footer from "./components/common/Footer";
 
 const MainLayout = ({ children }) => {
   return (
     <>
       <Navbar />
       <main className="mt-16 min-h-screen">{children}</main>
+      <Footer />
     </>
   );
 };

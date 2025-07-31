@@ -50,7 +50,7 @@ export default function ProductDetailsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-yellow-400 via-yellow-300 to-cream-200">
+    <div className="min-h-screen bg-gradient-to-br from-yellow-400 via-yellow-300 to-[#FEF3C7]">
       {/* Header */}
       <div className="bg-yellow-400 p-4">
         <Link
@@ -68,7 +68,7 @@ export default function ProductDetailsPage() {
           <div className="space-y-4">
             {/* Main Image */}
             <div className="bg-white rounded-2xl p-8 shadow-lg border-4 border-yellow-300">
-              <div className="aspect-square bg-cream-100 rounded-xl overflow-hidden">
+              <div className="aspect-square bg-[#FEF3C7] rounded-xl overflow-hidden">
                 <img
                   src={productImages[selectedImage]}
                   alt={product.name}
@@ -86,7 +86,7 @@ export default function ProductDetailsPage() {
                   className={`aspect-square bg-white rounded-lg p-2 border-2 transition-all hover:border-yellow-400 ${
                     selectedImage === index
                       ? "border-yellow-400 ring-2 ring-yellow-300"
-                      : "border-cream-200"
+                      : "border-[#FEF3C7]"
                   }`}
                 >
                   <img
@@ -154,10 +154,10 @@ export default function ProductDetailsPage() {
                   Quantity
                 </label>
                 <div className="flex items-center space-x-4">
-                  <div className="flex items-center bg-cream-100 rounded-lg">
+                  <div className="flex items-center bg-[#FEF3C7] rounded-lg">
                     <button
                       onClick={() => handleQuantityChange(-1)}
-                      className="p-2 text-blue-600 hover:bg-cream-200 rounded-l-lg transition-colors"
+                      className="p-2 text-blue-600 hover:bg-[#FEF3C7] rounded-l-lg transition-colors"
                     >
                       <Minus className="w-4 h-4" />
                     </button>
@@ -166,7 +166,7 @@ export default function ProductDetailsPage() {
                     </span>
                     <button
                       onClick={() => handleQuantityChange(1)}
-                      className="p-2 text-blue-600 hover:bg-cream-200 rounded-r-lg transition-colors"
+                      className="p-2 text-blue-600 hover:bg-[#FEF3C7] rounded-r-lg transition-colors"
                     >
                       <Plus className="w-4 h-4" />
                     </button>
@@ -187,7 +187,7 @@ export default function ProductDetailsPage() {
                       className={`py-2 px-3 border-2 rounded-lg font-medium transition-all ${
                         selectedSize === size
                           ? "border-yellow-400 bg-yellow-400 text-blue-700"
-                          : "border-cream-200 text-blue-600 hover:border-yellow-300"
+                          : "border-[#FEF3C7] text-blue-600 hover:border-yellow-300"
                       }`}
                     >
                       {size}
@@ -232,7 +232,7 @@ export default function ProductDetailsPage() {
             </div>
 
             {/* Product Description */}
-            <div className="bg-cream-100 rounded-2xl p-6 border-4 border-yellow-300">
+            <div className="bg-[#FEF3C7] rounded-2xl p-6 border-4 border-yellow-300">
               <h3 className="text-xl font-bold text-blue-700 mb-3">
                 Product Description
               </h3>
