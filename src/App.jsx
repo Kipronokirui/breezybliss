@@ -14,6 +14,7 @@ import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import ShopPage from "./pages/ShopPage";
 import Footer from "./components/common/Footer";
+import PageNotFound from "./pages/PageNotFound";
 
 const MainLayout = ({ children }) => {
   return (
@@ -76,6 +77,14 @@ const AppContent = () => {
           }
         />
         <Route path="/dashboard" element={<DashboardPage />} />
+        <Route
+          path="*"
+          element={
+            <MainLayout>
+              <PageNotFound />
+            </MainLayout>
+          }
+        />
       </Routes>
       <Cart />
       <AuthModal
