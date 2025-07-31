@@ -257,7 +257,7 @@ export default function ProductDetailsPage() {
                 <div className="flex items-center justify-between text-sm">
                   <span className="text-blue-600">Origin:</span>
                   <span className="text-blue-700 font-medium">
-                    Designed in Kenya
+                    Designed in UAE
                   </span>
                 </div>
               </div>

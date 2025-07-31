@@ -65,7 +65,7 @@ export default function Footer(){
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-yellow-400" />
-                <span className="text-blue-200">Nairobi, Kenya</span>
+                <span className="text-blue-200">Nairobi, UAE</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-yellow-400" />
@@ -93,7 +93,7 @@ export default function Footer(){
             <div className="flex items-center space-x-2 text-blue-200">
               <span>© {currentYear} Breezy Bliss. Made with</span>
               <Heart className="w-4 h-4 text-red-400 fill-current" />
-              <span>in Kenya</span>
+              <span>in UAE</span>
             </div>
             
             <div className="flex flex-wrap gap-6 text-sm">
