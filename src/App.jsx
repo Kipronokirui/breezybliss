@@ -9,6 +9,8 @@ import Navbar from "./components/common/Navbar";
 import ProductGrid from "./components/ProductGrid";
 import Home from "./pages/Home";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
+import DashboardPage from "./pages/DashboardPage";
+import LoginPage from "./pages/LoginPage";
 
 const MainLayout = ({ children }) => {
   return (
@@ -28,7 +30,6 @@ const AppContent = () => {
 
   return (
     <div>
-      <Navbar />
       <Routes>
         <Route
           path="/"
@@ -46,6 +47,15 @@ const AppContent = () => {
             </MainLayout>
           }
         />
+        <Route
+          path="/account/login"
+          element={
+            <MainLayout>
+              <LoginPage />
+            </MainLayout>
+          }
+        />
+        <Route path="/dashboard" element={<DashboardPage />} />
       </Routes>
       <Cart />
       <AuthModal

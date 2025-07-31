@@ -2,6 +2,7 @@ import React from "react";
 import { Search, User, ShoppingBag, Menu } from "lucide-react";
 import { useCart } from "../../context/CartContext";
 import { useAuth } from "../../context/AuthContext";
+import logo from "../../assets/breezeBlissLogo.jpeg";
 
 export default function Navbar() {
   const { cartItems, toggleCart } = useCart();
@@ -17,9 +18,16 @@ export default function Navbar() {
             <div className="md:hidden p-2 cursor-pointer rounded-lg bg-white/20 hover:bg-white/30 transition-colors">
               <Menu className="w-5 h-5 text-blue-700" />
             </div>
-            <h3 className="text-xl md:text-2xl font-bold text-blue-700 tracking-wide">
-              BREEZY BLISS
-            </h3>
+            <div className="flex items-center space-x-2">
+              <img
+                src={logo}
+                alt="Breezy Bliss Logo"
+                className="w-8 h-8 object-contain rounded-full"
+              />
+              <h3 className="text-xl md:text-2xl font-bold text-blue-700 tracking-wide">
+                BREEZY BLISS
+              </h3>
+            </div>
           </div>
 
           {/* Navigation */}
